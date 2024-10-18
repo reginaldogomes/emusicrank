@@ -5,7 +5,8 @@
     "scripts": {
         "start": "ts-node src/server.ts",
         "lint": "eslint .",
-        "format": "prettier --write ."
+        "format": "prettier --write .",
+        "dev": "ts-node-dev src/server.ts"
     },
     "keywords": [],
     "author": "Reginaldo Gomes",
