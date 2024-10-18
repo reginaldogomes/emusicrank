@@ -1,19 +1,14 @@
-import axios, { AxiosInstance } from 'axios';
+// src/config/spotifyApi.ts
 
-export default class SpotifyApi {
-  private static instance: AxiosInstance;
+import SpotifyWebApi from 'spotify-web-api-node';
+import dotenv from 'dotenv';
 
-  private constructor() {}
+dotenv.config();
 
-  static getInstance(): AxiosInstance {
-    if (!SpotifyApi.instance) {
-      SpotifyApi.instance = axios.create({
-        baseURL: 'https://api.spotify.com/v1',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-    }
-    return SpotifyApi.instance;
-  }
-}
+const spotifyApi = new SpotifyWebApi({
+    clientId: process.env.SPOTIFY_CLIENT_ID,
+    clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
+    redirectUri: 'http://localhost:3000/callback', // Modifique se necessário
+});
+
+export default spotifyApi;

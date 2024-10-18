@@ -9,7 +9,7 @@
 
 - **Exibição das Músicas Mais Tocadas**: Os usuários podem consultar as músicas mais populares de diferentes vertentes da música eletrônica.
 - **Exibição dos Artistas Mais Tocados**: O sistema também fornece informações sobre os artistas que mais estão se destacando em cada gênero.
-- **Filtragem por Gênero**: O usuário pode escolher um gênero específico para visualizar as músicas e artistas mais tocados desse gênero.
+- **Filtragem por Gênero**: O usuário pode escolher um gênero específico para visualizar as músicas e artistas mais tocados desse gênero.11
 
 ## Tecnologias Utilizadas
 
