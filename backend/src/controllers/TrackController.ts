@@ -1,5 +1,3 @@
-// src/controllers/TrackController.ts
-
 import { Request, Response } from 'express';
 import SpotifyService from '../services/SpotifyService';
 
@@ -10,7 +8,8 @@ class TrackController {
             const tracks = await SpotifyService.getTopTracksByGenre(genre);
             res.json(tracks);
         } catch (error) {
-            res.status(500).json({ error: error.message });
+            const errorMessage = error instanceof Error ? error.message : 'An unexpected error occurred';
+            res.status(500).json({ error: errorMessage });
         }
     }
 }
