@@ -1,6 +1,5 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import trackRoutes from './routes/trackRoutes';
 
 const app = express();
 
@@ -9,6 +8,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
-app.use('/api/tracks', trackRoutes);
+// app.use('/api/tracks', trackRoutes);
 
 export default app;
